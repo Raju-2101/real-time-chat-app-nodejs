@@ -68,7 +68,7 @@ io.on("connection", (socket) => {
     if (user) {
       io.to(user.room).emit(
         "message",
-        getMessages("Admin", `${user.username} user left the chat`)
+        getMessages("Admin", `${user.username} left the chat`)
       );
       io.to(user.room).emit("listUser", {
         room: user.room,
